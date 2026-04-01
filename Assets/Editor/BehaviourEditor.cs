@@ -1,36 +1,215 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class BehaviourEditor : EditorWindow
 {
-    public BehaviourContainer container;
-    [MenuItem("Behaviour Editor/Editor")]
+    public Stage container;
+    Vector3 mousePosition;
+    DialogueNode selectedNode;
+    public DrawNode textNode;
+    Vector2 scrollPosition;
+    Rect scrollAreaSize = new Rect(0, 0, 2000, 2000);
+
+
+
+    static EditorWindow window;
+
+    [MenuItem("Dialogue Editor/Editor")]
     static void ShowEditor()
     {
-        EditorWindow window = EditorWindow.GetWindow(typeof(BehaviourEditor));
+        window = EditorWindow.GetWindow(typeof(BehaviourEditor));
         window.minSize = new Vector2(800, 600);
     }
 
     private void OnGUI()
     {
-        container = (BehaviourContainer)EditorGUILayout.ObjectField(container, typeof(BehaviourContainer), false);
+        container = (Stage)EditorGUILayout.ObjectField(container, typeof(Stage), false, GUILayout.Width(200));
 
+        if (container == null)
+        {
+            return;
+        }
+
+        if (container.dialogueNodes == null)
+        {
+            container.dialogueNodes = new List<DialogueNode>();
+        }
+
+        if (container.dialogueNodes.Count > 0)
+        {
+            Rect nodeSize = container.dialogueNodes[container.dialogueNodes.Count - 1].nodeRect;
+            scrollAreaSize.width = nodeSize.xMax + 10;
+            scrollAreaSize.height = 400;
+        }
+        GUILayout.BeginArea(new Rect(0, 0, window.position.width, window.position.height));
+        scrollPosition = GUI.BeginScrollView(new Rect(0, 0, window.position.width, window.position.height), scrollPosition, scrollAreaSize);
+
+        Event e = Event.current;
+        mousePosition = e.mousePosition;
+        UserInput(e);
+        DrawLines();
+        DrawEditor();
+
+        GUI.EndScrollView();
+        GUILayout.EndArea();
+    }
+
+
+
+    private void DrawLines()
+    {
+        if (container != null)
+        {
+            if (container.dialogueNodes.Count > 1)
+            {
+                for (int i = 1; i < container.dialogueNodes.Count; i++)
+                {
+                    ConnectLine(container.dialogueNodes[i - 1].nodeRect, container.dialogueNodes[i].nodeRect);
+                }
+            }
+        }
+    }
+
+    private void ConnectLine(Rect start, Rect end)
+    {
+        Vector3 startPos = new Vector3(start.x + start.width, start.y + (start.height * 0.5f), 0f);
+        Vector3 endPos = new Vector3(end.x + (end.width * 0.5f), end.y + (end.height * 0.5f), 0);
+
+        ConnectLiveDraw(startPos, endPos);
+    }
+
+    private void ConnectLiveDraw(Vector3 start, Vector3 end)
+    {
+        Vector3 startTan = start + (Vector3.right * 50f);
+        Vector3 endTan = end + (Vector3.left * 50f);
+
+        Handles.DrawBezier(start, end, startTan, endTan, Color.black, null, 2);
+    }
+
+    private void UserInput(Event e)
+    {
+        if (container != null)
+        {
+            if (e.type == EventType.MouseDown && e.button == 1)
+            {
+                RightClick(e);
+            }
+
+            if (e.type == EventType.MouseDown && e.button == 0)
+            {
+                LeftClick(e);
+            }
+        }
+    }
+
+    private void LeftClick(Event e)
+    {
+
+    }
+
+    private void RightClick(Event e)
+    {
+        selectedNode = null;
+        CheckClickNode(e);
+
+        if (selectedNode == null)
+        {
+            ContextMenu(e);
+        }
+        else
+        {
+            NodeContextMenu(e);
+        }
+    }
+
+    private void NodeContextMenu(Event e)
+    {
+        GenericMenu menu = new GenericMenu();
+        menu.AddItem(new GUIContent("Add Text Line"), false, AddTextLine);
+        menu.AddItem(new GUIContent("Delete"), false, DeleteNode);
+        menu.ShowAsContext();
+        e.Use();
+    }
+
+    private void ContextMenu(Event e)
+    {
+        GenericMenu menu = new GenericMenu();
+        menu.AddItem(new GUIContent("Create Node"), false, CreateNode);
+        menu.ShowAsContext();
+        e.Use();
+    }
+
+    void CreateNode()
+    {
+        Undo.RecordObject(container, "Create Dialogue Node");
+
+        container.dialogueNodes.Add(new DialogueNode(textNode));
+
+        EditorUtility.SetDirty(container);
+    }
+    void AddTextLine()
+    {
+        if (selectedNode == null) return;
+
+        Undo.RecordObject(container, "Add Text Line");
+
+        if (selectedNode.textLines == null)
+        {
+            selectedNode.textLines = new List<TextLine>();
+        }
+
+        selectedNode.textLines.Add(new TextLine());
+
+        EditorUtility.SetDirty(container);
+    }
+
+    void DeleteNode()
+    {
+        Undo.RecordObject(container, "Delete Dialogue Node");
+
+        container.dialogueNodes.Remove(selectedNode);
+
+        EditorUtility.SetDirty(container);
+    }
+
+    private void CheckClickNode(Event e)
+    {
+        for (int i = 0; i < container.dialogueNodes.Count; i++)
+        {
+            if (container.dialogueNodes[i].nodeRect.Contains(e.mousePosition))
+            {
+                selectedNode = container.dialogueNodes[i];
+                break;
+            }
+        }
+    }
+
+
+
+    private void DrawEditor()
+    {
         BeginWindows();
 
         if (container != null)
         {
-            for (int i = 0; i < container.nodes.Count; i++)
+            for (int i = 0; i < container.dialogueNodes.Count; i++)
             {
-                container.nodes[i].nodeRect = GUI.Window(i, container.nodes[i].nodeRect, DrawNode, container.nodes[i].title);
+                Rect rect = container.dialogueNodes[i].nodeRect;
+                rect.x = rect.width * i + 10 * i + 10;
+                rect.y = 50;
+                container.dialogueNodes[i].nodeRect = rect;
+                GUI.Window(i, container.dialogueNodes[i].nodeRect, DrawNode, container.dialogueNodes[i].title);
             }
         }
 
         EndWindows();
     }
-    
+
     void DrawNode(int id)
     {
-        container.nodes[id].DrawNode();
-        GUI.DragWindow();
+        container.dialogueNodes[id].DrawNode();
     }
 }
