@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogueNodes:
   - nodeRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 10
+      y: 50
       width: 200
       height: 80
     title: 
@@ -27,8 +27,8 @@ MonoBehaviour:
     textLines: []
   - nodeRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 220
+      y: 50
       width: 200
       height: 80
     title: 
@@ -39,8 +39,8 @@ MonoBehaviour:
     textLines: []
   - nodeRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 430
+      y: 50
       width: 200
       height: 80
     title: 
@@ -51,8 +51,20 @@ MonoBehaviour:
     textLines: []
   - nodeRect:
       serializedVersion: 2
-      x: 0
-      y: 0
+      x: 640
+      y: 50
+      width: 200
+      height: 80
+    title: 
+    drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
+    text: 
+    character: {fileID: 0}
+    cameraEffect: {fileID: 0}
+    textLines: []
+  - nodeRect:
+      serializedVersion: 2
+      x: 850
+      y: 50
       width: 200
       height: 80
     title: 
