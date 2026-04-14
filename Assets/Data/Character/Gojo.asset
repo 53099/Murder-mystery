@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14744fa150589a646bcb0e603f3ba7fc, type: 3}
-  m_Name: Fumiko
+  m_Name: Gojo
   m_EditorClassIdentifier: Assembly-CSharp::Character
-  Name: Fumiko
+  Name: Gojo
   sprites:
-  - {fileID: 2800000, guid: a4ca31cc0368b6c4ba6542e411f462d0, type: 3}
-  - {fileID: 2800000, guid: 707d9172d4fbf164b82d1519c56d47c0, type: 3}
-  - {fileID: 2800000, guid: 361c7509c83c4a748a6fb01aebf8aa65, type: 3}
+  - {fileID: 2800000, guid: 10d0e1e52df93e54d9c75edc7aa886d7, type: 3}
+  - {fileID: 2800000, guid: 5a0168b5e6b602d46a556af3ad8ea955, type: 3}
+  - {fileID: 2800000, guid: 75c9ca72bd170ff44b0c461041fca96a, type: 3}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14744fa150589a646bcb0e603f3ba7fc, type: 3}
-  m_Name: Fumiko
+  m_Name: Sakura
   m_EditorClassIdentifier: Assembly-CSharp::Character
-  Name: Fumiko
+  Name: Sakura
   sprites:
-  - {fileID: 2800000, guid: a4ca31cc0368b6c4ba6542e411f462d0, type: 3}
-  - {fileID: 2800000, guid: 707d9172d4fbf164b82d1519c56d47c0, type: 3}
-  - {fileID: 2800000, guid: 361c7509c83c4a748a6fb01aebf8aa65, type: 3}
+  - {fileID: 2800000, guid: e0632aba7fa14ac47bdea9d551cbe84a, type: 3}
+  - {fileID: 2800000, guid: 43bd2f31e35c49c42a8087d59654e4b1, type: 3}
+  - {fileID: 2800000, guid: 2ce525d38196afd4f97bfba699bf0dcd, type: 3}
