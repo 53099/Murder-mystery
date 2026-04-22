@@ -1,9 +1,11 @@
 ﻿using System;
 
-public class CharacterState
+namespace Assets.Scripts
 {
-    public static explicit operator int(CharacterState v)
+    public enum CharacterState
     {
-        throw new NotImplementedException();
+        Idle,
+        Surprised,
+        Angry
     }
 }
