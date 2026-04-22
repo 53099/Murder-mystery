@@ -309,6 +309,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2014913990465275799, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 199012230}
     - target: {fileID: 2201388698907322186, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.49
@@ -356,6 +360,14 @@ PrefabInstance:
     - target: {fileID: 6417754203856917138, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -561.0341
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7586217312122162011, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_Name
@@ -860,6 +872,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2014913990465275799, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 230535114}
     - target: {fileID: 2201388698907322186, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -908,6 +924,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -561.0341
       objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7586217312122162011, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_Name
       value: Podium (1)
@@ -927,6 +951,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2014913990465275799, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1126002986}
     - target: {fileID: 2201388698907322186, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.475
@@ -975,6 +1003,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -561.0341
       objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7586217312122162011, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_Name
       value: Podium (3)
@@ -994,6 +1030,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2014913990465275799, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 826714004}
     - target: {fileID: 2201388698907322186, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1041,6 +1081,14 @@ PrefabInstance:
     - target: {fileID: 6417754203856917138, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -561.0341
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367331900464215515, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7586217312122162011, guid: b12ab5a759cc9ad48874d2c3ca2b24a8, type: 3}
       propertyPath: m_Name

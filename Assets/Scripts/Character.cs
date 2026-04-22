@@ -1,17 +1,17 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Characterstate
+public enum CharacterState
 {
     Idle = 0,
-    Surpised = 1,
+    Surprised = 1,
     Angry = 2,
 }
 
-[CreateAssetMenu(menuName ="Data/Character")]
+[CreateAssetMenu(menuName = "Data/Character")]
 public class Character : ScriptableObject
 {
-    public string Name;
-    public List<Texture> sprites;
+    public string characterName;
+    public List<Sprite> sprites;
+    public Vector3 scale;
 }

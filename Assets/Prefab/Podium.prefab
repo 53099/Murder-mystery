@@ -457,6 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2201388698907322186}
   - component: {fileID: 7367331900464215515}
+  - component: {fileID: 2014913990465275799}
   m_Layer: 0
   m_Name: Podium
   m_TagString: Untagged
@@ -534,16 +535,30 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a4ca31cc0368b6c4ba6542e411f462d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 20.000002, y: 35.00855}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2014913990465275799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7586217312122162011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ce26104d2ea86449af861b179efa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  character: {fileID: 0}
+  spriteRenderer: {fileID: 7367331900464215515}
 --- !u!1 &7623050549316778768
 GameObject:
   m_ObjectHideFlags: 0
