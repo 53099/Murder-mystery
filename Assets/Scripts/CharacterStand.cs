@@ -6,6 +6,7 @@ public class CharacterStand : MonoBehaviour
     public Character character;
     public CharacterState state;
     [SerializeField] SpriteRenderer spriteRenderer;
+    public Transform textPivot;
 
     private void Start()
     {
