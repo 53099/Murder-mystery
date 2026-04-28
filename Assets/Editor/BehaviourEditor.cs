@@ -33,6 +33,8 @@ public class BehaviourEditor : EditorWindow
             return;
         }
 
+        EditorUtility.SetDirty(container);
+
         if (container.dialogueNodes == null)
         {
             container.dialogueNodes = new List<DialogueNode>();
