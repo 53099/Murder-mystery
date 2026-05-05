@@ -18,58 +18,54 @@ MonoBehaviour:
       x: 10
       y: 50
       width: 200
-      height: 80
+      height: 144
     title: 
     drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
     text: 
     character: {fileID: 0}
     cameraEffect: {fileID: 0}
-    textLines: []
+    textLines:
+    - text: Text test
+      textEffect: {fileID: 0}
   - nodeRect:
       serializedVersion: 2
       x: 220
       y: 50
       width: 200
-      height: 80
+      height: 144
     title: 
     drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
     text: 
     character: {fileID: 0}
     cameraEffect: {fileID: 0}
-    textLines: []
+    textLines:
+    - text: Gojo satoru
+      textEffect: {fileID: 0}
   - nodeRect:
       serializedVersion: 2
       x: 430
       y: 50
       width: 200
-      height: 80
+      height: 144
     title: 
     drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
     text: 
     character: {fileID: 0}
     cameraEffect: {fileID: 0}
-    textLines: []
+    textLines:
+    - text: Ryomen Sukuna
+      textEffect: {fileID: 0}
   - nodeRect:
       serializedVersion: 2
       x: 640
       y: 50
       width: 200
-      height: 80
+      height: 144
     title: 
     drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
     text: 
     character: {fileID: 0}
     cameraEffect: {fileID: 0}
-    textLines: []
-  - nodeRect:
-      serializedVersion: 2
-      x: 850
-      y: 50
-      width: 200
-      height: 80
-    title: 
-    drawNode: {fileID: 11400000, guid: 35809495c91b99f49a9ae3801393abb6, type: 2}
-    text: 
-    character: {fileID: 0}
-    cameraEffect: {fileID: 0}
-    textLines: []
+    textLines:
+    - text: Nanami Kento
+      textEffect: {fileID: 0}
